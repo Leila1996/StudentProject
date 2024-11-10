@@ -6,7 +6,22 @@ using System.Threading.Tasks;
 
 namespace StudentProject.Models
 {
-    internal class Technician
+    public class Technician
     {
+        public string Name { get; set; }
+        public string AreaOfExpertise { get; set; }
+        public bool IsOnCall { get; set; }
+
+        public Technician(string name, string areaOfExpertise, bool isOnCall)
+        {
+            Name = name;
+            AreaOfExpertise = areaOfExpertise;
+            IsOnCall = isOnCall;
+        }
+
+        public override string ToString()
+        {
+            return $"{Name}, Szakirány: {AreaOfExpertise}, Készenlét: {IsOnCall}";
+        }
     }
 }
