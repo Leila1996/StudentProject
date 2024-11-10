@@ -6,7 +6,22 @@ using System.Threading.Tasks;
 
 namespace StudentProject.Models
 {
-    internal class Parent
+    public class Parent
     {
+        public string Name { get; set; }
+        public string Occupation { get; set; }
+        public string RelationshipToStudent { get; set; }
+
+        public Parent(string name, string occupation, string relationshipToStudent)
+        {
+            Name = name;
+            Occupation = occupation;
+            RelationshipToStudent = relationshipToStudent;
+        }
+
+        public override string ToString()
+        {
+            return $"{Name}, Foglalkozás: {Occupation}, Kapcsolat a diákkal: {RelationshipToStudent}";
+        }
     }
 }
