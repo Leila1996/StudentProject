@@ -7,19 +7,19 @@ namespace StudentProject.Models
     {
         public string Name { get; set; }
         public string Subject { get; set; }
-        public int ExperienceYears { get; set; }
-        public bool IsHeadOfDepartment { get; set; }
-    }
+        public string Email { get; set; }
 
-        public Teacher(string name, string subject, int experienceYears, bool isHeadOfDepartment)
+        public Teacher(string name, string subject, string email)
         {
             Name = name;
             Subject = subject;
-            ExperienceYears = experienceYears;
-            IsHeadOfDepartment = isHeadOfDepartment;
+            Email = email;
         }
+
         public override string ToString()
         {
-            return $"{Name}, Tantárgy: {Subject}, Tapasztalat: {ExperienceYears} év, Tanszékvezető: {(IsHeadOfDepartment ? "Igen" : "Nem")}";
+            return $"Tanár: {Name}, Tantárgy: {Subject}, Email: {Email}";
         }
+    }
+
 }

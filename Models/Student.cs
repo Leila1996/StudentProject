@@ -5,7 +5,8 @@
         protected string _name;
         protected int _age;
         protected string _email;
-        protected int _phone;
+        protected long _phone;
+       
 
         public Student()
         {
@@ -15,8 +16,7 @@
             _phone= 0;
         }
 
-
-        public Student(string name, int age, string email, int phone)
+        public Student(string name, int age, string email, long phone)
         {
             _name = name;
             _age = age;
@@ -29,7 +29,7 @@
 
         public string Email { get =>_email; set => _email=value; }
 
-        public int Phone { get =>_phone; set => _phone=value; }
+        public long Phone { get =>_phone; set => _phone=value; }
 
         public static bool IsEqual(Student student, Student otherStudent)
         {
